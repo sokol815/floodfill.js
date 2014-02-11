@@ -1,6 +1,13 @@
 var xdirs  = [-1, 0,1,0];
 var ydirs  = [ 0,-1,0,1];
 
+function inArray(x,y,boundingArray){ //confirm the x and y are within bounds of the 2d array boundingArray
+    if(x < 0 || x >= boundingArray.length || y < 0 || y >= boundingArray[0].length){
+        return false;
+    }
+    return true;
+}
+
 function floodFill(arr, originX, originY, valUse) {
 	if(valUse === undefined) {
 		valUse = 10; //used to denote we have visited this spot already
