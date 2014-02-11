@@ -1,3 +1,6 @@
+var xdirs  = [-1, 0,1,0];
+var ydirs  = [ 0,-1,0,1];
+
 function floodFill(arr, originX, originY, valUse) {
 	if(valUse === undefined) {
 		valUse = 10;
